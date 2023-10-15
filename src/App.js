@@ -28,7 +28,7 @@ function App() {
 			<Header className='Header'>
 				<img src={Logo} alt="logo" style={{ width: '120px', flexShrink: '1' }} />
 
-				<a href="https://github.com/bhenrichs/ai-youtube-video-summarizer" target="_blank" rel="noreferrer">
+				<a href="https://github.com/bhenrichs/ai-youtube-video-summarizer2" target="_blank" rel="noreferrer">
 					<GitHubIcon
 						className='Header-Icon'
 						style={{ fontSize: '40px', color: 'white' }}

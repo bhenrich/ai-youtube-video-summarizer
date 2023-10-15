@@ -1,0 +1,8 @@
+{
+    "name": "yt2info",
+    "script": "uvicorn",
+    "interpreter": "none",
+    "args": "yt2info:app --host 0.0.0.0 --port 5034 --ssl-keyfile /etc/letsencrypt/live/yuniiworks.de/privkey.pem --ssl-certfile /etc/letsencrypt/live/yuniiworks.de/cert.pem --ssl-ca-certs /etc/letsencrypt/live/yuniiworks.de/chain.pem",
+    "autorestart": true,
+    "watch": false
+}

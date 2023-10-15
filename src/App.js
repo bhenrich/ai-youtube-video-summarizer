@@ -10,6 +10,16 @@ import './App.css';
 const { Header, Content } = Layout;
 const { Title } = Typography;
 const { Option } = Select;
+const { Text } = Typography;
+
+
+
+const getSummary = async (url, lang) => {
+	const response = await fetch(`https://yuniiworks.de:5034/getVideoSummary?videoUrl=${url}&langCode=${lang}`);
+	const data = await response.json();
+
+	return data.summary;
+}
 
 function App() {
 	const [url, setUrl] = useState('');
@@ -23,6 +33,15 @@ function App() {
 	const handleDropdownChange = (value) => {
 		setLang(value);
 	};
+
+	const handleSubmit = async () => {
+		if (url === '') {
+			return;
+		}
+
+		const summary = await getSummary(url, lang);
+		setSummary(summary);
+	}
 
 	return (
 		<Layout className='App'>
@@ -42,7 +61,7 @@ function App() {
 			</Header>
 
 			<Content style={{ padding: '50px' }} className='App-Interface'>
-				<Title className='App-Title' level="h1"><span className='fancy-text-gradient'>AI</span> YouTube Video Summarizer</Title>
+				<Title className='App-Title' level="4"><span className='fancy-text-gradient'>AI</span> YouTube Video Summarizer</Title>
 				<div className='App-UI'>
 					<Input
 						placeholder="Enter URL"
@@ -109,21 +128,43 @@ function App() {
 						<Option value="cy">Welsh</Option>
 						<Option value="yi">Yiddish</Option>
 					</Select>
+
+					<button onClick={handleSubmit} className='App-Submit'>
+						Generate
+					</button>
 				</div>
 			</Content>
 
 			<Content className='App-Output'>
 				<Content className='App-Output-Text'>
-					<code>
+					<Text copyable>
 						{
 							summary !== '' ?
 								summary :
-								'Use the form above to get started!'
+								'Use the form above to get started! Not satisfied with the result? Just generate again!'
 						}
-					</code>
+					</Text>
 				</Content>
 			</Content>
-		</Layout>
+
+			<footer className='Footer'>
+				Made with <span role='img' aria-label='heart'>❤️</span> by <a href='https://github.com/bhenrich' target='_blank' rel='noreferrer'>Benjamin 'YuNii' Henrich</a>
+				<br />
+				<p>
+					<a>
+						Legal
+					</a>
+					&nbsp;|&nbsp;
+					<a>
+						Contact
+					</a>
+					&nbsp;|&nbsp;
+					<a>
+						Terms of Service
+					</a>
+				</p>
+			</footer>
+		</Layout >
 	);
 }
 

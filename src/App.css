@@ -82,7 +82,7 @@
 	border-radius: 5px;
 	border: 1px solid var(--text);
 	padding: 12px;
-	width: 80%;
+	width: 500px;
 	margin-bottom: 20px;
 	outline: none;
 
@@ -92,11 +92,35 @@
 .Language-Input {
 	border-radius: 5px;
 	border: 1px solid var(--text);
-	width: 200px;
+	width: 250px;
 	margin-bottom: 20px;
 	outline: none;
 
 	margin: 20px;
+}
+
+.App-Submit {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	border-radius: 5px;
+	border: 0px solid var(--text);
+
+	background-color: var(--primary);
+	color: var(--secondary);
+
+	font-size: 1.2rem;
+	font-weight: bold;
+
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.App-Submit:hover {
+	transition: all 0.2s ease-in-out;
+	background-color: var(--accent);
 }
 
 .URL-Input:focus,
@@ -125,4 +149,21 @@
 	justify-content: center;
 
 	transform: translateY(-300px);
+}
+
+.Footer {
+	background: #ddd;
+	/* Light grey */
+	color: var(--text);
+	text-align: center;
+	padding: 10px;
+	font-size: 0.8rem;
+}
+
+a {
+	color: var(--accent);
+}
+
+a:hover {
+	color: var(--primary);
 }

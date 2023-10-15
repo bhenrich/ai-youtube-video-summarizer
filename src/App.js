@@ -1,5 +1,5 @@
+import { Input, Layout, Select, Typography } from 'antd';
 import React, { useState } from 'react';
-import { Layout, Typography, Input, Select } from 'antd';
 
 import Logo from './images/logo.png';
 
@@ -14,6 +14,7 @@ const { Option } = Select;
 function App() {
 	const [url, setUrl] = useState('');
 	const [lang, setLang] = useState(null);
+	const [summary, setSummary] = useState('');
 
 	const handleUrlChange = (e) => {
 		setUrl(e.target.value);
@@ -26,9 +27,13 @@ function App() {
 	return (
 		<Layout className='App'>
 			<Header className='Header'>
-				<img src={Logo} alt="logo" style={{ width: '120px', flexShrink: '1' }} />
+				<img src={Logo} alt="logo" style={{ width: '120px', flexShrink: '1' }} className='Header-Logo' />
 
-				<a href="https://github.com/bhenrichs/ai-youtube-video-summarizer2" target="_blank" rel="noreferrer">
+				<a href='https://ko-fi.com/O4O5Q3ABB' target='_blank' rel='noreferrer'>
+					<img height='36' style={{ border: '0px', height: '36px', marginTop: '25px', transform: 'translateX(-45px)' }} src='https://storage.ko-fi.com/cdn/brandasset/kofi_button_stroke.png' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+				</a>
+
+				<a href="https://github.com/bhenrich/ai-youtube-video-summarizer" target="_blank" rel="noreferrer">
 					<GitHubIcon
 						className='Header-Icon'
 						style={{ fontSize: '40px', color: 'white' }}
@@ -105,6 +110,18 @@ function App() {
 						<Option value="yi">Yiddish</Option>
 					</Select>
 				</div>
+			</Content>
+
+			<Content className='App-Output'>
+				<Content className='App-Output-Text'>
+					<code>
+						{
+							summary !== '' ?
+								summary :
+								'Use the form above to get started!'
+						}
+					</code>
+				</Content>
 			</Content>
 		</Layout>
 	);

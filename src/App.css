@@ -9,7 +9,6 @@
 .App {
 	background-color: var(--background);
 	color: var(--text);
-	font-family: Arial, sans-serif;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -17,14 +16,13 @@
 
 .App-Title {
 	font-weight: bolder;
+	text-align: center;
 }
 
 .App-Interface {
-	width: 80%;
-	position: relative;
-	z-index: 2;
+	width: 80vw;
+	margin-left: 10vw;
 
-	left: 10%;
 }
 
 .App-UI {
@@ -60,7 +58,9 @@
 .Header img {
 	max-width: 100%;
 	height: auto;
+}
 
+.Header-Logo {
 	filter: invert(100%);
 }
 
@@ -103,4 +103,26 @@
 .Language-Input:focus {
 	border-color: var(--accent);
 	box-shadow: 0 0 8px rgba(207, 67, 7, 0.2);
+}
+
+.App-Output {
+	margin: 150px;
+	margin-bottom: 50px;
+
+	background-color: #fefefe;
+	color: var(--text);
+	border-radius: 20px;
+	padding: 20px;
+
+	border: var(--primary);
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: var(--primary) 0px 0px 3px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	transform: translateY(-300px);
 }

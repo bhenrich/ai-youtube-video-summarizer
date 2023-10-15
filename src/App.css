@@ -1,38 +1,106 @@
+:root {
+	--text: #130e01;
+	--background: #fffaeb;
+	--primary: #ff8400;
+	--secondary: #fff5d6;
+	--accent: #cf4307;
+}
+
 .App {
-  text-align: center;
+	background-color: var(--background);
+	color: var(--text);
+	font-family: Arial, sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-Title {
+	font-weight: bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-Interface {
+	width: 80%;
+	position: relative;
+	z-index: 2;
+
+	left: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-UI {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+.Header {
+	background-color: var(--primary);
+	color: var(--secondary);
+	padding: 15px 0;
+	text-align: center;
+
+	position: relative;
+	z-index: 1;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 10px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header-Icon {
+	transform: translateY(12px)
+}
+
+.Header img {
+	max-width: 100%;
+	height: auto;
+
+	filter: invert(100%);
+}
+
+
+.Title {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.fancy-text-gradient {
+	background: linear-gradient(45deg, var(--primary), var(--accent));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.URL-Input {
+	border-radius: 5px;
+	border: 1px solid var(--text);
+	padding: 12px;
+	width: 80%;
+	margin-bottom: 20px;
+	outline: none;
+
+	margin: 20px;
+}
+
+.Language-Input {
+	border-radius: 5px;
+	border: 1px solid var(--text);
+	width: 200px;
+	margin-bottom: 20px;
+	outline: none;
+
+	margin: 20px;
+}
+
+.URL-Input:focus,
+.Language-Input:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 8px rgba(207, 67, 7, 0.2);
 }

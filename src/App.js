@@ -150,7 +150,7 @@ function App() {
 			<footer className='Footer'>
 				Made with <span role='img' aria-label='heart'>❤️</span> by <a href='https://github.com/bhenrich' target='_blank' rel='noreferrer'>Benjamin 'YuNii' Henrich</a>
 				<br />
-				<p>
+				<p style={{ marginTop: '-2px', marginBottom: '-3px' }}>
 					<a>
 						Legal
 					</a>

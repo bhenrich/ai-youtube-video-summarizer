@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+
 :root {
 	--text: #130e01;
 	--background: #fffaeb;
@@ -7,7 +9,10 @@
 }
 
 .App {
-	background-color: var(--background);
+	/* background-color: var(--background); */
+	background:
+		linear-gradient(45deg, #fffaeb, #fff5d6),
+		url(https://grainy-gradients.vercel.app/noise.svg);
 	color: var(--text);
 	min-height: 100vh;
 	display: flex;
@@ -15,7 +20,7 @@
 }
 
 .App-Title {
-	font-weight: bolder;
+	font-weight: 800;
 	text-align: center;
 }
 
@@ -69,6 +74,7 @@
 	font-size: 2.5rem;
 	margin-bottom: 1rem;
 	text-align: center;
+	font-weight: 800;
 }
 
 .fancy-text-gradient {
@@ -76,6 +82,10 @@
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
+
+
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
 }
 
 .URL-Input {
@@ -92,7 +102,7 @@
 .Language-Input {
 	border-radius: 5px;
 	border: 1px solid var(--text);
-	width: 250px;
+	height: 35px;
 	margin-bottom: 20px;
 	outline: none;
 
@@ -105,10 +115,12 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 
+	height: 35px;
+
 	border-radius: 5px;
 	border: 0px solid var(--text);
 
-	background-color: var(--primary);
+	background: linear-gradient(45deg, var(--primary), var(--accent));
 	color: var(--secondary);
 
 	font-size: 1.2rem;
@@ -120,7 +132,18 @@
 
 .App-Submit:hover {
 	transition: all 0.2s ease-in-out;
-	background-color: var(--accent);
+	transform: scale(1.1);
+
+	border-color: var(--accent);
+	box-shadow: 0 0 8px rgba(207, 67, 7, 0.4);
+}
+
+.App-Submit:active {
+	transition: all 0.1s ease-in-out;
+	transform: scale(1);
+
+	border-color: var(--accent);
+	box-shadow: 0 0 8px rgba(207, 67, 7, 0.6);
 }
 
 .URL-Input:focus,

@@ -192,7 +192,6 @@
 	text-align: center;
 	padding: 10px;
 	font-size: 0.8rem;
-	height: 32px;
 }
 
 a {
@@ -232,4 +231,6 @@ Legal-Table-Left {
 	width: 50%;
 	text-align: left;
 	padding: 20px;
+
+	margin-top: -18px;
 }

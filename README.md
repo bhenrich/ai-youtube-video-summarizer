@@ -1,4 +1,4 @@
-# AI YouTube Video Summarizer (yt2info) v1.1.1
+# AI YouTube Video Summarizer (yt2info) v1.1.2
 
 ### What is this? :thinking:
 It's simple. You just paste in the URL of a YouTube Video, select the language of the Video and click "Generate". After waiting for a few seconds the Website will spit out a Summary of all the facts and information listed in the Video. This works best for Informational Videos and/or Tutorials.

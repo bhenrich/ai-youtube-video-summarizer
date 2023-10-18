@@ -15,7 +15,7 @@ Yes! Like everything what I do this is completely free to use, without any adver
 ### Do I need an Account? :id:
 Not yet, but chances are that I will have to implement an account system later down the line. The reasons for that have to do with legal bullsh*t. I need to be able to restrict access to certain people in case of abuse of my tool, so accounts are the easiest way to go. But those won't contain any more info than your E-Mail and Password, and everything will be saved in an encrypted state on a secure server.
 
-### Is any data being collected? :woman_detective:
+### Is any data being collected? 🕵️
 You will find the long answer in the Privacy Policy (which is only in german for now but i am working on an english translation already), but the short answer is pretty much no. I collect absolutely nothing. No cookies, no IPs, I store absolutely nothing about the user (until accounts are implemented at least). 
 
 ### What are the Plans for the Future? :rocket:

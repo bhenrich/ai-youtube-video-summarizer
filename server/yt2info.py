@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 title = ""
-api_key = "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"
+api_key = ""
 
 
 def download_youtube_video(url, download_path):
